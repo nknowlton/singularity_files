@@ -1,12 +1,12 @@
 Bootstrap: docker
-From: alpine:3.6
+From: alpine:3.9.3
 
 %post 
 version=1.9.1
 
 #The --no-cache option allows you to not cache the index locally, making image smaller
 apk add --update --no-cache ncurses python-dev py-setuptools \
-    && apk add --virtual=deps --update --no-cache \
+    && apk add --update --no-cache \
     py-pip \
     cython-dev \
     musl-dev \
